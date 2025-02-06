@@ -79,7 +79,7 @@ Open `http://localhost:8000`.
 
 #### **Option 3: Open Directly in Chrome (Bypassing CORS Restrictions)**
 
-If you don’t want to run a local server, you can launch Chrome with the '--allow-file-access-from-files' flag:
+If you don’t want to run a local server, you can launch Chrome with the `--allow-file-access-from-files` flag:
 
 - On Windows:
 
