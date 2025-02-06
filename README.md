@@ -55,7 +55,7 @@ To generate a production build:
 npm run build
 ```
 
-This outputs the static files in the `dist/` folder.
+This outputs the static files in the `docs/` folder.
 
 ### **Running the Build Locally**
 By default, you **cannot open `index.html` directly** due to CORS restrictions (`file://` protocol).  
@@ -77,7 +77,30 @@ cd dist python -m http.server 8000
 
 Open `http://localhost:8000`.
 
+#### **Option 3: Open Directly in Chrome (Bypassing CORS Restrictions)**
+
+If you don’t want to run a local server, you can launch Chrome with the '--allow-file-access-from-files' flag:
+
+- On Windows:
+
+```bash
+chrome.exe --allow-file-access-from-files
+```
+
+- On macOS:
+
+```bash
+open -a "Google Chrome" --args --allow-file-access-from-files
+```
+
+- On Linux:
+
+```bash
+google-chrome --allow-file-access-from-files
+```
+
 ---
+
 
 ## 🛠 JSON Documentation Format
 
