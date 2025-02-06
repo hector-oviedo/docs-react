@@ -1,0 +1,102 @@
+[
+  {
+    "type": "section",
+    "section_id": "overview",
+    "label": "Overview",
+    "url": "sections/overview.json"
+  },
+  {
+    "type": "group",
+    "group_id": "auth_api",
+    "label": "API - Auth",
+    "group": [
+      {
+        "type": "section",
+        "section_id": "auth_login",
+        "label": "Login",
+        "url": "sections/auth/auth_login.json"
+      },
+      {
+        "type": "section",
+        "section_id": "auth_register",
+        "label": "Register",
+        "url": "sections/auth/auth_register.json"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "group_id": "chat_api",
+    "label": "API - Chat",
+    "group": [
+      {
+        "type": "section",
+        "section_id": "chat_stream",
+        "label": "Chat Stream",
+        "url": "sections/chat/chat_stream.json"
+      },
+      {
+        "type": "section",
+        "section_id": "chat_stop",
+        "label": "Chat Stop",
+        "url": "sections/chat/chat_stop.json"
+      },
+      {
+        "type": "section",
+        "section_id": "chat_complete",
+        "label": "Chat Complete",
+        "url": "sections/chat/chat_complete.json"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "group_id": "documents",
+    "label": "API - Documents",
+    "group": [
+      {
+        "type": "section",
+        "section_id": "add_document",
+        "label": "Add",
+        "url": "sections/documents/add_document.json"
+      },
+      {
+        "type": "section",
+        "section_id": "remove_document",
+        "label": "Remove",
+        "url": "sections/documents/remove_document.json"
+      },
+      {
+        "type": "section",
+        "section_id": "attach_document",
+        "label": "Attach",
+        "url": "sections/documents/attach_document.json"
+      },
+      {
+        "type": "section",
+        "section_id": "detach_document",
+        "label": "Detach",
+        "url": "sections/documents/detach_document.json"
+      },
+      {
+        "type": "section",
+        "section_id": "list_documents",
+        "label": "List",
+        "url": "sections/documents/list_documents.json"
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "group_id": "function_calling",
+    "label": "Function Calling",
+    "group": [
+      {
+        "type": "section",
+        "section_id": "list_functions",
+        "label": "List",
+        "url": "sections/function_calling/list_functions.json"
+      }
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+[
+  { "type": "header", "h": 3, "content": "Nov AI: Local RAG LLM System" },
+  {
+    "type": "p",
+    "content": "Nov AI is a locally running **Retrieval-Augmented Generation (RAG) AI system** that allows users to interact with an LLM while storing persistent sessions and documents. The backend is built with **FastAPI (Python 3.10)** and the frontend with **React + Vite**."
+  },
+  {
+    "type": "p",
+    "content": "Each user has **their own sessions**, which store chat history. Documents can be uploaded and attached to sessions, improving AI responses by using **retrieval-based augmentation (RAG)**. The AI model used is **Deepseek R1 Distilled**, a lightweight model optimized for reasoning and context retention."
+  },
+  { "type": "header", "h": 3, "content": "GitHub Repository" },
+  {
+    "type": "p",
+    "content": "You can find the source code here: [Nov AI GitHub](https://github.com/hector-oviedo/novai)"
+  },
+  { "type": "header", "h": 3, "content": "Backend Setup (Python 3.10)" },
+  {
+    "type": "snippet",
+    "language": "bash",
+    "content": "git clone https://github.com/hector-oviedo/novai\ncd novai\nconda create --name novai python=3.10\nconda activate novai\npip install -r requirements.txt\npython main.py"
+  },
+  {
+    "type": "p",
+    "content": "The backend uses **FastAPI**, manages sessions, and integrates the local AI model for inference. It runs on **localhost:8000** by default."
+  },
+  { "type": "header", "h": 3, "content": "Frontend Setup (React + Vite)" },
+  {
+    "type": "snippet",
+    "language": "bash",
+    "content": "cd frontend\nnpm install\nnpm run dev"
+  },
+  {
+    "type": "p",
+    "content": "The frontend is a **React app using Vite**, which provides the chat interface and document management. Once running, access the app at **http://localhost:5173**."
+  },
+  { "type": "header", "h": 3, "content": "How It Works" },
+  {
+    "type": "p",
+    "content": "- **Users sign in** and create sessions."
+  },
+  {
+    "type": "p",
+    "content": "- **Documents** can be uploaded and attached to sessions."
+  },
+  {
+    "type": "p",
+    "content": "- **Chat messages are stored** for persistent interactions."
+  },
+  {
+    "type": "p",
+    "content": "- The AI model **retrieves relevant document context** and generates responses."
+  }
+]
