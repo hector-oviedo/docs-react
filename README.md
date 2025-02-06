@@ -37,7 +37,7 @@ git clone https://github.com/hector-oviedo/docs-react.git cd docs-react
 npm install
 ```
 
-### **2️⃣ Install Dependencies**
+### **3️⃣ Run Development Server**
 
 ```bash
 npm run dev
