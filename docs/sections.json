@@ -1,6 +1,7 @@
 [
   {
     "type": "section",
+    "section_id": "overview",
     "label": "Overview",
     "url": "sections/overview.json"
   },
