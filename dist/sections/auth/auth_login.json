@@ -1,0 +1,29 @@
+[
+    { "type": "header", "h": 3, "content": "User Login" },
+    {
+      "type": "p",
+      "content": "This API allows users to authenticate with their username and password. If credentials are valid, a user ID is returned."
+    },
+    { "type": "header", "h": 5, "content": "METHOD: POST" },
+    { "type": "snippet", "language": "bash", "content": "/user/signin" },
+    { "type": "header", "h": 3, "content": "Parameters" },
+    {
+      "type": "table",
+      "headers": ["Parameter", "Type", "Required", "Description"],
+      "rows": [
+        ["username", "string", "Yes", "The username of the user."],
+        ["password", "string", "Yes", "The password of the user."]
+      ]
+    },
+    { "type": "header", "h": 3, "content": "Response Format" },
+    {
+      "type": "p",
+      "content": "Returns a JSON object containing the authenticated user’s details."
+    },
+    { "type": "snippet", "language": "json", "content": "{\n  \"user_id\": \"abc123\",\n  \"username\": \"test_user\"\n}" },
+    {
+      "type": "p",
+      "content": "If authentication fails, an error response will be returned."
+    }
+  ]
+  

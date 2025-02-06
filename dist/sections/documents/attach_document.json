@@ -1,0 +1,29 @@
+[
+    { "type": "header", "h": 3, "content": "Attach Document" },
+    {
+      "type": "p",
+      "content": "This API attaches a document to an active session, allowing the LLM to use it during inference."
+    },
+    { "type": "header", "h": 5, "content": "METHOD: POST" },
+    { "type": "snippet", "language": "bash", "content": "/document/attach" },
+    { "type": "header", "h": 3, "content": "Parameters" },
+    {
+      "type": "table",
+      "headers": ["Parameter", "Type", "Required", "Description"],
+      "rows": [
+        ["user_id", "string", "Yes", "The unique identifier of the user."],
+        ["session_id", "string", "Yes", "The unique identifier of the session."],
+        ["doc_id", "string", "Yes", "The unique identifier of the document to attach."]
+      ]
+    },
+    { "type": "header", "h": 3, "content": "Response Format" },
+    {
+      "type": "p",
+      "content": "The API returns a success message if the document was attached."
+    },
+    { "type": "snippet", "language": "json", "content": "{\n  \"message\": \"Document attached successfully.\"\n}" },
+    {
+      "type": "p",
+      "content": "If the document does not exist, an error response will be returned."
+    }
+  ]  
