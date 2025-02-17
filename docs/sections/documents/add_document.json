@@ -1,31 +1,45 @@
 [
-    { "type": "header", "h": 3, "content": "Add Document" },
+    {
+      "type": "header",
+      "h": 3,
+      "content": "Add Document"
+    },
     {
       "type": "p",
-      "content": "This API allows users to upload a document to the system. The document will be stored under the user's account and can be later attached to sessions."
+      "content": "Uploads a document file (FormData) and optionally ingests it into the RAG system."
     },
-    { "type": "header", "h": 5, "content": "METHOD: POST" },
-    { "type": "snippet", "language": "bash", "content": "/document/upload" },
-    { "type": "header", "h": 3, "content": "Parameters" },
+    {
+      "type": "header",
+      "h": 5,
+      "content": "METHOD: POST"
+    },
+    {
+      "type": "snippet",
+      "language": "bash",
+      "content": "/documents/upload"
+    },
+    {
+      "type": "header",
+      "h": 3,
+      "content": "Form Fields"
+    },
     {
       "type": "table",
-      "headers": ["Parameter", "Type", "Required", "Description"],
+      "headers": ["Field", "Type", "Required", "Description"],
       "rows": [
-        ["user_id", "string", "Yes", "The unique identifier of the user."],
-        ["doc_id", "string", "Yes", "The unique identifier of the document."],
-        ["name", "string", "No", "Optional name for the document."],
-        ["description", "string", "No", "Optional description of the document."],
-        ["content", "string", "Yes", "The actual content of the document."]
+        ["name", "string", "Yes", "Document name."],
+        ["description", "string", "No", "Brief description."],
+        ["file", "file", "Yes", "Document file to upload."]
       ]
     },
-    { "type": "header", "h": 3, "content": "Response Format" },
     {
-      "type": "p",
-      "content": "The API returns a JSON object containing details of the uploaded document."
+      "type": "header",
+      "h": 3,
+      "content": "Response"
     },
-    { "type": "snippet", "language": "json", "content": "{\n  \"doc_id\": \"123\",\n  \"user_id\": \"abc\",\n  \"name\": \"My Document\",\n  \"description\": \"Sample document description\",\n  \"content\": \"This is the content of the document.\"\n}" },
     {
-      "type": "p",
-      "content": "If a document with the same `doc_id` already exists, the API will return an error."
+      "type": "snippet",
+      "language": "json",
+      "content": "{\n  \"message\": \"Document uploaded\",\n  \"id\": \"<UUID>\",\n  \"name\": \"filename\",\n  \"description\": \"desc\"\n}"
     }
-]
+  ]

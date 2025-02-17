@@ -1,28 +1,35 @@
 [
-  { "type": "header", "h": 3, "content": "Chat Stop" },
+  {
+    "type": "header",
+    "h": 3,
+    "content": "Chat Stop"
+  },
   {
     "type": "p",
-    "content": "This API allows users to interrupt an ongoing streaming response from the LLM."
+    "content": "Stops an ongoing streaming inference."
   },
-  { "type": "header", "h": 5, "content": "METHOD: POST" },
-  { "type": "snippet", "language": "bash", "content": "/chat/stop" },
-  { "type": "header", "h": 3, "content": "Parameters" },
   {
-    "type": "table",
-    "headers": ["Parameter", "Type", "Required", "Description"],
-    "rows": [
-      ["user_id", "string", "Yes", "The unique identifier of the user."],
-      ["session_id", "string", "Yes", "The unique identifier of the chat session."]
-    ]
+    "type": "header",
+    "h": 5,
+    "content": "METHOD: POST"
   },
-  { "type": "header", "h": 3, "content": "Response Format" },
   {
-    "type": "p",
-    "content": "Returns a JSON object confirming that the inference process has been stopped."
+    "type": "snippet",
+    "language": "bash",
+    "content": "/chat/stop"
   },
-  { "type": "snippet", "language": "json", "content": "{\n  \"message\": \"Inference stopped.\"\n}" },
+  {
+    "type": "header",
+    "h": 3,
+    "content": "Response Format"
+  },
   {
     "type": "p",
-    "content": "This action stops the model from continuing to generate output in stream mode."
+    "content": "A simple JSON message confirming the inference has stopped."
+  },
+  {
+    "type": "snippet",
+    "language": "json",
+    "content": "{\n  \"message\": \"Inference stopped\"\n}"
   }
 ]

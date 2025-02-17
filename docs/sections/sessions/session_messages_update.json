@@ -1,22 +1,22 @@
-[
+ [
     {
       "type": "header",
       "h": 3,
-      "content": "Detach Document"
+      "content": "Update Message"
     },
     {
       "type": "p",
-      "content": "Removes an attached document from a given session."
+      "content": "Edits an existing message by ID in the specified session."
     },
     {
       "type": "header",
       "h": 5,
-      "content": "METHOD: POST"
+      "content": "METHOD: PUT"
     },
     {
       "type": "snippet",
       "language": "bash",
-      "content": "/documents/detach"
+      "content": "/sessions/{session_id}/messages/{message_id}"
     },
     {
       "type": "header",
@@ -27,8 +27,8 @@
       "type": "table",
       "headers": ["Field", "Type", "Required", "Description"],
       "rows": [
-        ["doc_id", "string", "Yes", "ID of the document."],
-        ["session_id", "string", "Yes", "Session to detach from."]
+        ["content", "string", "No", "Updated message text."],
+        ["think", "string", "No", "Updated hidden 'thinking' text."]
       ]
     },
     {
@@ -39,6 +39,6 @@
     {
       "type": "snippet",
       "language": "json",
-      "content": "{\n  \"message\": \"Document detached\"\n}"
+      "content": "{\n  \"id\": 15,\n  \"sender\": \"user\",\n  \"content\": \"Edited content\",\n  \"think\": \"Modified chain-of-thought\"\n}"
     }
   ]

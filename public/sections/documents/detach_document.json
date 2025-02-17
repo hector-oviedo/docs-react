@@ -1,30 +1,44 @@
 [
-    { "type": "header", "h": 3, "content": "Detach Document" },
+    {
+      "type": "header",
+      "h": 3,
+      "content": "Detach Document"
+    },
     {
       "type": "p",
-      "content": "This API removes an attached document from an active session. The document will no longer be available for inference in that session."
+      "content": "Removes an attached document from a given session."
     },
-    { "type": "header", "h": 5, "content": "METHOD: POST" },
-    { "type": "snippet", "language": "bash", "content": "/document/detach" },
-    { "type": "header", "h": 3, "content": "Parameters" },
+    {
+      "type": "header",
+      "h": 5,
+      "content": "METHOD: POST"
+    },
+    {
+      "type": "snippet",
+      "language": "bash",
+      "content": "/documents/detach"
+    },
+    {
+      "type": "header",
+      "h": 3,
+      "content": "Body"
+    },
     {
       "type": "table",
-      "headers": ["Parameter", "Type", "Required", "Description"],
+      "headers": ["Field", "Type", "Required", "Description"],
       "rows": [
-        ["user_id", "string", "Yes", "The unique identifier of the user."],
-        ["session_id", "string", "Yes", "The unique identifier of the session."],
-        ["doc_id", "string", "Yes", "The unique identifier of the document to detach."]
+        ["doc_id", "string", "Yes", "ID of the document."],
+        ["session_id", "string", "Yes", "Session to detach from."]
       ]
     },
-    { "type": "header", "h": 3, "content": "Response Format" },
     {
-      "type": "p",
-      "content": "The API returns a success message in JSON format."
+      "type": "header",
+      "h": 3,
+      "content": "Response"
     },
-    { "type": "snippet", "language": "json", "content": "{\n  \"message\": \"Document detached successfully.\"\n}" },
     {
-      "type": "p",
-      "content": "If the document is not attached to the session, an error response will be returned."
+      "type": "snippet",
+      "language": "json",
+      "content": "{\n  \"message\": \"Document detached\"\n}"
     }
   ]
-  

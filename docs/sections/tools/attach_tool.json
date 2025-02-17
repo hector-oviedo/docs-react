@@ -1,12 +1,13 @@
+
 [
     {
       "type": "header",
       "h": 3,
-      "content": "Detach Document"
+      "content": "Attach Tool"
     },
     {
       "type": "p",
-      "content": "Removes an attached document from a given session."
+      "content": "Attaches a tool to a session, enabling function-calling for that session."
     },
     {
       "type": "header",
@@ -16,7 +17,7 @@
     {
       "type": "snippet",
       "language": "bash",
-      "content": "/documents/detach"
+      "content": "/tools/attach"
     },
     {
       "type": "header",
@@ -27,8 +28,8 @@
       "type": "table",
       "headers": ["Field", "Type", "Required", "Description"],
       "rows": [
-        ["doc_id", "string", "Yes", "ID of the document."],
-        ["session_id", "string", "Yes", "Session to detach from."]
+        ["tool_id", "string", "Yes", "ID of the tool."],
+        ["session_id", "string", "Yes", "Session to attach to."]
       ]
     },
     {
@@ -39,6 +40,6 @@
     {
       "type": "snippet",
       "language": "json",
-      "content": "{\n  \"message\": \"Document detached\"\n}"
+      "content": "{\n  \"message\": \"Tool attached to session\"\n}"
     }
   ]

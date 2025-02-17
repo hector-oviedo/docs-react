@@ -1,30 +1,49 @@
 [
-    { "type": "header", "h": 3, "content": "User Registration" },
-    {
-      "type": "p",
-      "content": "This API allows new users to register an account by providing a username, password, and optional email."
-    },
-    { "type": "header", "h": 5, "content": "METHOD: POST" },
-    { "type": "snippet", "language": "bash", "content": "/user/create" },
-    { "type": "header", "h": 3, "content": "Parameters" },
-    {
-      "type": "table",
-      "headers": ["Parameter", "Type", "Required", "Description"],
-      "rows": [
-        ["username", "string", "Yes", "The desired username for the new account."],
-        ["password", "string", "Yes", "The password for the new account."],
-        ["email", "string", "No", "Optional email address for account recovery."]
-      ]
-    },
-    { "type": "header", "h": 3, "content": "Response Format" },
-    {
-      "type": "p",
-      "content": "Returns a JSON object containing the registered user's details."
-    },
-    { "type": "snippet", "language": "json", "content": "{\n  \"user_id\": \"xyz789\",\n  \"username\": \"new_user\"\n}" },
-    {
-      "type": "p",
-      "content": "If the username is already taken, the API will return an error response."
-    }
-  ]
-  
+  {
+    "type": "header",
+    "h": 3,
+    "content": "User Registration"
+  },
+  {
+    "type": "p",
+    "content": "Allows a new user to register with a username, password, and optional email."
+  },
+  {
+    "type": "header",
+    "h": 5,
+    "content": "METHOD: POST"
+  },
+  {
+    "type": "snippet",
+    "language": "bash",
+    "content": "/auth/register"
+  },
+  {
+    "type": "header",
+    "h": 3,
+    "content": "Parameters"
+  },
+  {
+    "type": "table",
+    "headers": ["Parameter", "Type", "Required", "Description"],
+    "rows": [
+      ["username", "string", "Yes", "Desired username."],
+      ["password", "string", "Yes", "Password."],
+      ["email", "string", "No", "Optional email."]
+    ]
+  },
+  {
+    "type": "header",
+    "h": 3,
+    "content": "Response Format"
+  },
+  {
+    "type": "p",
+    "content": "A JSON object containing a success message and the newly created user_id."
+  },
+  {
+    "type": "snippet",
+    "language": "json",
+    "content": "{\n  \"message\": \"User registered.\",\n  \"user_id\": \"<UUID>\"\n}"
+  }
+]

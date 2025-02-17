@@ -1,28 +1,31 @@
 [
-    { "type": "header", "h": 3, "content": "List of Documents" },
+    {
+      "type": "header",
+      "h": 3,
+      "content": "List Documents"
+    },
     {
       "type": "p",
-      "content": "This API returns all documents currently to a given user."
+      "content": "Returns a list of all documents belonging to the current user, including session attachments."
     },
-    { "type": "header", "h": 5, "content": "METHOD: GET" },
-    { "type": "snippet", "language": "bash", "content": "/document/list_attached" },
-    { "type": "header", "h": 3, "content": "Parameters" },
     {
-      "type": "table",
-      "headers": ["Parameter", "Type", "Required", "Description"],
-      "rows": [
-        ["user_id", "string", "Yes", "The unique identifier of the user."]
-      ]
+      "type": "header",
+      "h": 5,
+      "content": "METHOD: GET"
     },
-    { "type": "header", "h": 3, "content": "Response Format" },
     {
-      "type": "p",
-      "content": "Returns a JSON array of all documents, each containing an ID, name, and description, and if apply the id session attached."
+      "type": "snippet",
+      "language": "bash",
+      "content": "/documents/list"
     },
-    { "type": "snippet", "language": "json", "content": "[\n  {\n    \"doc_id\": \"123\",\n    \"session_id\": \"123\",\n    \"name\": \"Project Requirements\",\n    \"description\": \"Main project document.\"\n  },\n  {\n    \"doc_id\": \"456\",\n    \"session_id\": \"123\",\n    \"name\": \"User Guide\",\n    \"description\": \"Step-by-step usage instructions.\"\n  }\n]" },
     {
-      "type": "p",
-      "content": "If no documents, the API returns an empty array."
+      "type": "header",
+      "h": 3,
+      "content": "Response"
+    },
+    {
+      "type": "snippet",
+      "language": "json",
+      "content": "[\n  {\n    \"id\": \"<UUID>\",\n    \"name\": \"docName\",\n    \"description\": \"desc\",\n    \"content\": \"filename or text\",\n    \"sessions\": [ \"<sessionId1>\", \"<sessionId2>\" ]\n  }\n]"
     }
   ]
-  

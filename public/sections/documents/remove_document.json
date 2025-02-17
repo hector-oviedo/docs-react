@@ -1,29 +1,44 @@
+  
 [
-    { "type": "header", "h": 3, "content": "Remove Document" },
+    {
+      "type": "header",
+      "h": 3,
+      "content": "Remove Document"
+    },
     {
       "type": "p",
-      "content": "This API allows users to permanently delete a document from the system. This action is irreversible."
+      "content": "Deletes a document from the user’s library and from the RAG store."
     },
-    { "type": "header", "h": 5, "content": "METHOD: DELETE" },
-    { "type": "snippet", "language": "bash", "content": "/document/delete" },
-    { "type": "header", "h": 3, "content": "Parameters" },
+    {
+      "type": "header",
+      "h": 5,
+      "content": "METHOD: POST"
+    },
+    {
+      "type": "snippet",
+      "language": "bash",
+      "content": "/documents/delete"
+    },
+    {
+      "type": "header",
+      "h": 3,
+      "content": "Body"
+    },
     {
       "type": "table",
-      "headers": ["Parameter", "Type", "Required", "Description"],
+      "headers": ["Field", "Type", "Required", "Description"],
       "rows": [
-        ["user_id", "string", "Yes", "The unique identifier of the user."],
-        ["doc_id", "string", "Yes", "The unique identifier of the document to delete."]
+        ["doc_id", "string", "Yes", "ID of the document to remove."]
       ]
     },
-    { "type": "header", "h": 3, "content": "Response Format" },
     {
-      "type": "p",
-      "content": "The API returns a success message in JSON format."
+      "type": "header",
+      "h": 3,
+      "content": "Response"
     },
-    { "type": "snippet", "language": "json", "content": "{\n  \"message\": \"Document deleted successfully.\"\n}" },
     {
-      "type": "p",
-      "content": "If the document does not exist, an error response will be returned."
+      "type": "snippet",
+      "language": "json",
+      "content": "{\n  \"message\": \"Document deleted\"\n}"
     }
   ]
-  

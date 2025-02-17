@@ -5,6 +5,7 @@ import axios from "axios";
 import { ContentSnippet } from "./ContentSnippet";
 import { ContentTable } from "./ContentTable";
 import { ErrorPopup } from "../error/ErrorPopup";
+import { ContentTemplate } from "./ContentTemplate";
 
 export const ContentPage = () => {
   const [sectionURL, setSectionURL] = useState(sessionStorage.getItem("selectedSection") || "");
@@ -69,7 +70,7 @@ export const ContentPage = () => {
           borderRadius: 0
         }}
       >
-        {!sectionURL && <Typography>Select a section from the sidebar.</Typography>}
+        {!sectionURL && <ContentTemplate/>}
 
         <ErrorPopup error={error} onClose={() => setError("")} />
 
